@@ -2,17 +2,24 @@ import React, { Component } from 'react'
 
 // Components
 import Input from "./Input"
-import { Container, Button } from 'react-bootstrap';
+import { Container, Row, Col } from 'react-bootstrap';
+import Button from './Button'
 
 export class SearchForm extends Component {
     render() {
         return (
-            <div>
+            <form onSubmit={this.props.onSubmit}>
                 <Container className="text-center" >
-                    <Input placeholder="Digite o nome do pokemon..." value={this.props.nomePoke} onChange={this.props.onChange} />
-                    <Button variant="dark" style={{marginTop: "15px"}} size="lg" onClick={this.props.onClick} disabled={this.props.nomePoke === ""}>Buscar</Button>
+                    <Row>
+                        <Col xs="11">
+                            <Input placeholder="Digite o nome do pokemon..." value={this.props.nomePoke} onChange={this.props.onChange} />
+                        </Col>
+                        <Col xs="1">
+                            <Button type="submit" variant="dark" size="md" disabled={this.props.nomePoke === ""}>Buscar</Button>
+                        </Col>
+                    </Row>
                 </Container>
-            </div>
+            </form>
         )
     }
 }

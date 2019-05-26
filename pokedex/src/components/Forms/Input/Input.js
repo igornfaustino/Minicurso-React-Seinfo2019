@@ -7,7 +7,7 @@ export class Input extends Component {
             <div>
                 <Form.Control
                     style={{
-                        borderRadius: "30px"
+                        borderRadius: "30px 10px 10px 30px"
                     }}
                     {...this.props}
                 />
