@@ -18,8 +18,10 @@ export class HistoryPage extends Component {
         return (
             <div>
                 <h3 className="text-center" style ={{
-                    marginTop: "40px"
+                    marginTop: "40px",
+                    marginBottom: "40px"
                 }}>Histórico de Pokémons</h3>
+                <hr/>
 
                 {historico}
             </div>
